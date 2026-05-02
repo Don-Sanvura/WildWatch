@@ -126,7 +126,7 @@ To transform a prototype into a **real-world, production-ready campus safety sys
 
 ## Demo & Access
 
-> *(Add your live link or QR code here)*
+> *(https://bc-wildwatch.lovable.app)*
 
 ---
 
