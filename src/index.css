@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BC Wildwatch — campus wildlife safety. Editorial, urgent, calm. */
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    /* Signal red — BC Wildwatch brand */
+    --primary: 354 78% 47%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 354 88% 58%;
+
+    --secondary: 40 20% 92%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 40 18% 94%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 200 35% 92%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 354 78% 47%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 35 92% 52%;
+    --warning-foreground: 0 0% 8%;
+
+    --success: 152 60% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --info: 210 80% 48%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 40 14% 88%;
+    --input: 40 14% 88%;
+    --ring: 354 78% 47%;
+
+    --radius: 0.875rem;
+
+    /* Severity scale */
+    --sev-critical: 354 78% 47%;
+    --sev-high: 18 88% 52%;
+    --sev-medium: 38 92% 50%;
+    --sev-low: 200 60% 45%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(354 78% 47%) 0%, hsl(18 88% 52%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(40 33% 97%) 0%, hsl(40 20% 92%) 100%);
+    --gradient-emergency: linear-gradient(135deg, hsl(354 78% 47%) 0%, hsl(354 88% 38%) 100%);
+
+    --shadow-card: 0 1px 2px hsl(0 0% 0% / 0.04), 0 8px 24px -8px hsl(0 0% 0% / 0.08);
+    --shadow-elevated: 0 2px 4px hsl(0 0% 0% / 0.06), 0 16px 40px -12px hsl(0 0% 0% / 0.12);
+    --shadow-emergency: 0 8px 32px -8px hsl(354 78% 47% / 0.5);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 40 20% 96%;
+    --card: 0 0% 11%;
+    --card-foreground: 40 20% 96%;
+    --popover: 0 0% 11%;
+    --popover-foreground: 40 20% 96%;
+    --primary: 354 78% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 40 20% 96%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 40 10% 65%;
+    --accent: 0 0% 16%;
+    --accent-foreground: 40 20% 96%;
+    --destructive: 354 78% 52%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 354 78% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-subtle { background: var(--gradient-subtle); }
+  .bg-gradient-emergency { background: var(--gradient-emergency); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+  .shadow-emergency { box-shadow: var(--shadow-emergency); }
+  .transition-smooth { transition: var(--transition-smooth); }
+
+  .pulse-dot::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: currentColor;
+    opacity: 0.5;
+    animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up { animation: slide-up 0.4s ease-out both; }
