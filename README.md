@@ -1,4 +1,4 @@
----
+
 
 #  BC WildWatch
 
@@ -81,18 +81,12 @@ This modular approach ensures scalability and maintainability while meeting proj
 
 ---
 
-##  Team
-
-* **Don Sanvura** – Project Management & Deployment
-* **Nthabeleng Mathabathe** – UI/UX & Frontend
-* **Jordann Heunis** – Backend & AI
-* **Lerato Mathebe** – Database & Analytics
-* **Pholisa Mathenjwa** – Security & Authentication
-* **Masego Motswe** – Automation & Presentation
+Author:
+* **Don Sanvura**
 
 ---
 
-##  Installation & Setup
+## Installation & Setup
 
 ```bash
 # Clone the repository
@@ -110,7 +104,7 @@ npm run dev
 
 ---
 
-##  Deployment
+## Deployment
 
 The application is designed to be deployed using:
 
@@ -120,7 +114,7 @@ The application is designed to be deployed using:
 
 ---
 
-##  Project Goal
+## Project Goal
 
 To transform a prototype into a **real-world, production-ready campus safety system** using only free technologies while supporting:
 
@@ -131,17 +125,21 @@ To transform a prototype into a **real-world, production-ready campus safety sys
 ---
 
 ## Demo & Access
-> *(https://bc-wildwatch.lovable.app)*
+
 > *(Add your live link or QR code here)*
 
 ---
 
-##  License
+## License
 
 This project is for academic and educational purposes.
 
 ---
 
-##  Final Note
+## Final Note
 
 BC WildWatch is more than just a project — it’s a step toward smarter, safer campuses through technology.
+
+---
+
+
